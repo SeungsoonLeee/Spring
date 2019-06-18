@@ -14,7 +14,7 @@ public class InsertMain2 {
 			ss = DBManager.connect();
 
 			sc = new Scanner(System.in);
-			System.out.print("메뉴 이름 : ");
+			System.out.print("추가할 메뉴 이름 : ");
 			String m = sc.next();
 			System.out.print("가격 : ");
 			int p = sc.nextInt();

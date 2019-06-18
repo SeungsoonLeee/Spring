@@ -28,4 +28,25 @@
 		set price=#{price}
 		where name=#{name}
 	</update>
+	
+	<select id="selectStartEndMenu" resultType="com.lee.mb2.main.Menu" parameterType="com.lee.mb2.main.Menu">
+		select * from jun17_menu
+		where price &gt;= #{price1} and price &lt;= #{price2}
+	</select>
+	
+	<update id="updateUpperMenu" parameterType="com.lee.mb2.main.Menu">
+		update jun17_menu
+		set price = price + #{price2}
+		where price &lt;= #{price1}
+	</update>
+	
+	<delete id="deleteLowerMenu" parameterType="com.lee.mb2.main.Menu">
+		delete from jun17_menu
+		where price &lt;= #{price}
+	</delete>
+	
+	<select id="detailSearchMenu" resultType="com.lee.mb2.main.Menu" parameterType="com.lee.mb2.main.Menu">
+		select * from jun17_menu
+		where name like '%'||#{name}||'%' and price &gt;= #{price} and price &lt;= #{price2}
+	</select>
 </mapper>

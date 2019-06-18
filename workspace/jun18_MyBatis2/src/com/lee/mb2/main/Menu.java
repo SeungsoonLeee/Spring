@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 public class Menu {
 	private String name;
 	private BigDecimal price;
+	private BigDecimal price2;
 
 	public Menu() {
 
@@ -19,6 +20,13 @@ public class Menu {
 		super();
 		this.name = name;
 		this.price = price;
+	}
+
+	public Menu(String name, BigDecimal price, BigDecimal price2) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.price2 = price2;
 	}
 
 	public String getName() {
@@ -35,6 +43,14 @@ public class Menu {
 
 	public void setPrice(BigDecimal price) {
 		this.price = price;
+	}
+
+	public BigDecimal getPrice2() {
+		return price2;
+	}
+
+	public void setPrice2(BigDecimal price2) {
+		this.price2 = price2;
 	}
 
 }
