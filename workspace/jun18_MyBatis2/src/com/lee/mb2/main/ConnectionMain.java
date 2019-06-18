@@ -29,7 +29,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 //Mybatis : DB ORM(Object Relation Mapping) Framework
 // 자바 객체와 자동으로 맵핑
 
-
 //DB연결				연결정보			sql문
 //JDBC				.java에			.java에
 //Connection Pool	context.xml에	.java에
@@ -41,21 +40,25 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class ConnectionMain {
 	public static void main(String[] args) {
+		SqlSession ss = null;
+
 		try {
-			//서버 연결 정보가 있는 파일명을 가져온다.
-			String cfgFile = "config.xml";	//패키지 안에 넣었을 경우 패키지 경로를 모두 써준다("com/lee/mb2/main/config.xml")
+			// 서버 연결 정보가 있는 파일명을 가져온다.
+			String cfgFile = "config.xml"; // 패키지 안에 넣었을 경우 패키지 경로를 모두 써준다("com/lee/mb2/main/config.xml")
 			InputStream is = Resources.getResourceAsStream(cfgFile);
-			
-			//SqlSession 생성 순서
+
+			// SqlSession 생성 순서
 			SqlSessionFactoryBuilder ssfb = new SqlSessionFactoryBuilder();
 			SqlSessionFactory ssf = ssfb.build(is);
-			SqlSession ss = ssf.openSession();
-			
+			ss = ssf.openSession();
+
 			System.out.println("DB연결 성공");
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("DB연결 실패");
+		} finally {
+			ss.close();
 		}
 	}
 }
