@@ -3,7 +3,29 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="menuMapper">
+	<select id="selectMenu" resultType="com.lee.mb2.main.Menu">
+		select * from jun17_menu
+	</select>
 	<insert id="insertMenu">
-		insert into jun17_menu values('테스트메뉴2', 2000)
+		insert into jun17_menu
+		values('테스트메뉴2', 2000)
 	</insert>
+	<insert id="insertMenu2" parameterType="com.lee.mb2.main.Menu">
+		<!-- values 안의 필드명은 java에 새성한 멤버의 변수명과 일치시킨다. -->
+		insert into jun17_menu
+		values(#{name}, #{price})
+	</insert>
+	<select id="searchMenu" resultType="com.lee.mb2.main.Menu" parameterType="com.lee.mb2.main.Menu">
+		select * from jun17_menu
+		where name like '%'||#{name}||'%'
+	</select>
+	<delete id="deleteMenu" parameterType="com.lee.mb2.main.Menu">
+		delete from jun17_menu
+		where name=#{name}
+	</delete>
+	<update id="updateMenu" parameterType="com.lee.mb2.main.Menu">
+		update jun17_menu
+		set price=#{price}
+		where name=#{name}
+	</update>
 </mapper>
