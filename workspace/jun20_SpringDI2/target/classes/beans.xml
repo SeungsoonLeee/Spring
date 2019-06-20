@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<bean id="f" class="com.lee.sdi2.main.Foodset">
+		<constructor-arg value="가정의 달 세트"></constructor-arg>
+		<constructor-arg value="39900"></constructor-arg>
+		<constructor-arg value="5"></constructor-arg>
+		<constructor-arg value="게장"></constructor-arg>
+	</bean>
+	
+	<bean id="kim" class="com.lee.sdi2.main.Kimsumi">
+		<constructor-arg value="김수미"></constructor-arg>
+		<constructor-arg value="60"></constructor-arg>
+	</bean>
+	
+	<context:annotation-config></context:annotation-config>
+	
+</beans>
