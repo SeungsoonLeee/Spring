@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Hulk라는 객체를 xml에서 만든다. id는 사용할 변수면을 의미 -> 자바에서는 id를 통하여 객체를 불러옴 -->
+	<!-- 헐크에서 아이언맨으로 수정하고 싶으면 자바코드를 바꾸는 것이 아니라 class를 바꾸어 주면 된다. -->
+	<!-- <bean class="com.lee.si3.main.Hulk" id="h"></bean> -->
+	<bean class="com.lee.si3.main.Ironman" id="h"></bean>
+	
+	<!-- 자바에 있는 날짜객체를 사용해보자. -->
+	<bean class="java.util.Date" id="d"></bean>
+</beans>
