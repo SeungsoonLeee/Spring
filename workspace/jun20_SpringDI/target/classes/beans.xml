@@ -23,4 +23,73 @@
 		<constructor-arg value="좀비2"></constructor-arg>
 		<constructor-arg value="120"></constructor-arg>
 	</bean>
+
+	<bean id="h4" class="com.lee.sdi.main.Human">
+		<property name="name" value="좀비마스터"></property>
+		<property name="age" value="25"></property>
+		<property name="pet" ref="m"></property>
+	</bean>
+	<bean id="h5" class="com.lee.sdi.main.Human">
+		<constructor-arg value="주인"></constructor-arg>
+		<constructor-arg value="30"></constructor-arg>
+		<constructor-arg ref="m2"></constructor-arg>
+	</bean>
+
+	<bean id="h6" class="com.lee.sdi.main.Human">
+		<property name="name" value="김철수"></property>
+		<property name="age" value="30"></property>
+		<property name="pet" ref="m"></property>
+		<!-- 배열은 GUI에서 처리가 불가능 하므로 소스코드를 직접 쳐주어야 한다. -->
+		<property name="nickname">
+			<list value-type="java.lang.String">
+			<!-- value-type은 String의 경우 생략 가능하지만 그 외 자료형은 type을 적어준다. -->
+				<value>별명1</value>
+				<value>별명2</value>
+				<value>별명3</value>
+			</list>
+		</property>
+		<!-- 배열과 리스트는 처리 방식이 같다. -->
+		<property name="toDoList">
+			<list>
+			<!-- value-type은 String의 경우 생략 가능하지만 그 외 자료형은 type을 적어준다. -->
+				<value>아침 먹기</value>
+				<value>점심 먹기</value>
+				<value>저녁 먹기</value>
+			</list>
+		</property>
+		<property name="family">
+			<map key-type="java.lang.String" value-type="java.lang.String">
+			<!-- type은 String의 경우 생략 가능하지만 그 외 자료형은 type을 적어준다. -->
+				<entry key="아버지" value="김아빠"></entry>
+				<entry key="어머니" value="김엄마"></entry>
+			</map>
+		</property>
+	</bean>
+	
+	<!-- 날짜를 받아오기위해 today라는 객체를 만들어줌 -->
+	<bean id="today" class="java.util.Date"></bean>
+	<bean id="s" class="com.lee.sdi.main.Snack">
+		<!--
+		<property name="name" value="새우깡"></property>
+		<property name="price" value="2000"></property>
+		<property name="exp" ref="today"></property>
+		<property name="nutriFact">
+			<map value-type="java.lang.Integer">
+				<entry key="탄수화물" value="100"></entry>
+				<entry key="지방" value="50"></entry>
+				<entry key="단백질" value="10"></entry>
+			</map>
+		</property>
+		 -->
+		<constructor-arg value="새우깡"></constructor-arg>
+		<constructor-arg value="2000"></constructor-arg>
+		<constructor-arg ref="today"></constructor-arg>
+		<constructor-arg>
+			<map value-type="java.lang.Integer">
+				<entry key="탄수화물" value="100"></entry>
+				<entry key="지방" value="50"></entry>
+				<entry key="단백질" value="10"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
 </beans>
