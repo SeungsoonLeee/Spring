@@ -13,20 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //MVC중 C를 Servlet이 아니라 @Controller가 붙은 일반 클래스로
 @Controller
 public class C {
-	
 	//메서드를 요청에 매핑 시켜준다.
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String danfjgrpsk() {
 		System.out.println("아무렇게나");
-		return "index"; //index.jsp로 포워딩한다는 의미
-	}
-	
-	@RequestMapping(value="/calPlus.do", method=RequestMethod.GET)
-	public String calPlus() {
-		System.out.println("더하기 계산");
-		
-		
-		
 		return "index"; //index.jsp로 포워딩한다는 의미
 	}
 }
