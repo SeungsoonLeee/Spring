@@ -1,0 +1,20 @@
+src/main/java
+	.java
+
+src/main/resources
+	.java가 사용하는 자원 파일
+
+src/main/webapp/WEB-INF/views
+	.jsp
+
+src/main/webapp/resources
+	.jsp가 사용하는 자원 파일(.css .js .img등)
+
+src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
+	beans.xml의 역할
+
+src/main/webapp/WEB-INF/web.xml
+	POST 요청 방식 파라메터 인코딩 방식 설정
+
+pom.xml
+	Maven
