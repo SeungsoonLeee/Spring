@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@font-face{
+	font-family: "Goyang";
+	src: url("Goyang.ttf");
+}
+
+table {
+	border-spacing: 1px;
+}
+
+a {
+	text-decoration: none;
+}
+
+body, input, button, textarea, select {
+	font-family: "Goyang";
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#siteTitleArea {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}
+
+#siteTitleArea2 {
+	height: 80px;
+	background-color: #FFFFFFBB;
+}
+
+#siteTitleArea2 a {
+	font-size: 30pt;
+	font-weight: 900;
+	color: green;
+}
+
+#siteMenuArea {
+	background-color: green;
+	height: 50px;
+}
+
+#siteMenuArea2 {
+	width: 1000px;
+}
+
+#siteMenuArea td {
+}
+
+#siteMenuArea2 a {
+	color: white;
+	font-size: 20pt;
+	font-weight: 500;
+}
+
+#siteContentArea {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 135px;
+}
+
+#siteLoginArea {
+	position: fixed;
+	right: 20px;
+	top: 135px;
+}

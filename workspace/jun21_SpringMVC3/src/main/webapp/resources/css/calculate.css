@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+button {
+	cursor: pointer;
+}
+
+input {
+	border: 0px;	
+}
+
+.calTable {
+	
+}
+
+.calTableTd {
+	background-color: green;
+	color: white;
+	font-size: 14pt;
+}
+
+.calTableTd2 {
+	border: green solid 2px;
+	font-size: 14pt;
+	font-weight: 500;
+}
+
+.calTableTd2 textarea{
+	border: 0px;
+}
