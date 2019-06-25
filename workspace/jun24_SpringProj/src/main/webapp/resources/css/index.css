@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "Goyang";
+	src: url("Goyang.ttf");
+}
+
+body {
+	font-family: "Goyang";
+}
+
+table {
+	border: black solid 1px;
+	border-spacing: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+#indexTable {
+	
+}
+
+#siteMenuArea {
+	
+}
+
+#loginArea {
+	background-color: transparent;
+	position: fixed;
+	right: 20px;
+	top: 135px;
+}
+
+#contentArea {
+	
+}

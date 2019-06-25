@@ -1,0 +1,45 @@
+ping 192.168.0.41
+		관리자 id, pw : sd
+ping 192.168.0.46
+
+cmd  ->  sqlplus / as sysdba
+계정만들기
+	create user [id] identified by [pw];
+관리자 권한 주기
+	grant connect, resource, dba to [id];
+
+클라이언트
+	InstantClient
+
+계정만들기
+	create user [id] identified by [pw];
+
+권한 설정
+	권한들을 묶어서 역할(role)을 지정
+	grant [role], [role] to [id];
+	grant connect, resource to ys;
+
+접속
+	sqlplus [id]/[pw]@[ip]:[port]/[db명]
+
+	port : 1521
+	db명 : xe
+
+	=> 
+sqlplus ys/ys@192.168.0.41:1521/xe
+
+테이블 스페이스 생성
+
+create tablespace [TS명] datafile 'D:/db/[파일명].dbf' size 500m;
+
+create tablespace ys datafile 'D:/db/ys.dbf' size 500m;
+
+계정에 테이블스페이스 지정	
+
+alter user ys default tablespace ys;
+
+OracleDB 접속 프로그램
+	정품 : sqlplus
+	사제품 : sqldeveloper, orange, toad, eclipse
+
+ojdbc8.jar : java 1.8 이상용
